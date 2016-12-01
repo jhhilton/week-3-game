@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hangman!</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type='text/javascript' src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+<style>
+
+  .jumbotron {
+      background-color: #baefb1;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: 'Gloria Hallelujah', cursive;
+  }
+
+  * {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+ .letter {
+    display: inline-block;
+    list-style: none;
+    width: 20px;
+    margin: 0 5px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    color: white;
+}
+.current-word {
+    list-style: none;
+}
+.output {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.correct {
+    background-color: green;
+    transition: all 1s ease;
+}
+.error {
+    color: red;
+    opacity: 1;
+}
+.warning {
+    color: orange;
+    opacity: 1;
+}
+.win {
+    color: green;
+    opacity: 1;
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+<div class="wrapper jumbotron text-center">
+<h1>U.S. States Hangman!</h1>
+<p>Try to guess the U.S. State.</p>
+</div>
+<div class="container text-center">
+  <div class="row">
+<form id="hangman">
+    <input type="text" maxlength="1" minlength="1" name="letter" id="letter" placeholder="Choose a letter" />
+    <input id="guess" name="guess" type="submit" class="btn btn-primary" value="Guess" />
+    <button id="restart" name="restart" type="button" class="btn btn-default">Restart</button>
+</form>
+<br><br>
+<ul id="letters"></ul>
+<p id="man"></p>
+<p id="output" class="output"></p>
+
+  </div>
+</div>
+
+</body>
+
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</html>
